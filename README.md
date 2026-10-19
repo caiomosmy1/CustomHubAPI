@@ -4,13 +4,13 @@ API Clientes, auditacao, filtros e paginacao.
 
 ## Introdução do projeto
 
-##instalação e configuração 
+## instalação e configuração 
 
-##Uso principal 
+## Uso principal 
 
-##Solucoes 
+## Solucoes 
 
-##Referências
+## Referências
 
 
 
