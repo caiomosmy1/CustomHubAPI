@@ -15,14 +15,18 @@ suas respectivas localizações.
 
 ## Arquitetura Domain Drive-Design DDD
 
-
-
+```mermaid flowchart TD
+    Cliente["[ Cliente HTTP ]"] -->|json| Presentation["[1. Presentation (Controller)]"]
+    Presentation -->|Recebe CriarClienteDTO| Application["[2. Application (AppService)]"]
+    Application -->|Orquestra a transação / Mapeia DTO| Domain["[3. Domain (Entidades / Business)]"]
+    Domain -->|Retorna entidade validada| Infrastructure["[4. Infrastructure (Repository)]"]
+    Infrastructure -->|EF Core gera o SQL| Postgres["[Banco PostgreSQL]"]```
 
 ## instalação e configuração 
 
 
 ## Uso principal 
-
+CRM para gerenciamento de contatos.
 
 
 ## Solucoes 
