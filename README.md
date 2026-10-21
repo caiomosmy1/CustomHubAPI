@@ -12,15 +12,15 @@ permitindo criar, ler, atualizar e
 excluir (CRUD) dados de clientes e 
 suas respectivas localizações.
 
+## Arquitetura Domain-Driven Design (DDD)
 
-## Arquitetura Domain Drive-Design DDD
-
-```mermaid flowchart TD
+```mermaid
+flowchart TD
     Cliente["[ Cliente HTTP ]"] -->|json| Presentation["[1. Presentation (Controller)]"]
     Presentation -->|Recebe CriarClienteDTO| Application["[2. Application (AppService)]"]
     Application -->|Orquestra a transação / Mapeia DTO| Domain["[3. Domain (Entidades / Business)]"]
     Domain -->|Retorna entidade validada| Infrastructure["[4. Infrastructure (Repository)]"]
-    Infrastructure -->|EF Core gera o SQL| Postgres["[Banco PostgreSQL]"]```
+    Infrastructure -->|EF Core gera o SQL| Postgres["[Banco PostgreSQL]"]
 
 ## instalação e configuração 
 
