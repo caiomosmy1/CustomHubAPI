@@ -20,7 +20,7 @@ flowchart TD
     Presentation -->|Recebe CriarClienteDTO| Application["[2. Application (AppService)]"]
     Application -->|Orquestra a transação / Mapeia DTO| Domain["[3. Domain (Entidades / Business)]"]
     Domain -->|Retorna entidade validada| Infrastructure["[4. Infrastructure (Repository)]"]
-    Infrastructure -->|EF Core gera o SQL| Postgres["[Banco PostgreSQL]"]
+    Infrastructure -->|EF Core gera o SQL| Postgres["[Banco ```
 
 ## instalação e configuração 
 
